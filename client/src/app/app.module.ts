@@ -2,7 +2,7 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule, provideHttpClient, withFetch } from '@angular/common/http';
+import { provideHttpClient, withFetch, withInterceptorsFromDi } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { registerLocaleData } from '@angular/common';
 import localeEs from '@angular/common/locales/es';
@@ -20,37 +20,33 @@ import { ServicioListComponent } from './components/servicio-list/servicio-list.
 import { UsuarioComponent } from './components/usuario/usuario.component';
 import { ResumenComponent } from './components/resumen/resumen.component';
 import { SoporteTecnicoComponent } from './components/soporte-tecnico/soporte-tecnico.component';
+import { GoogleMapsModule } from '@angular/google-maps';
 
 registerLocaleData(localeEs, 'es');
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    LoginComponent,
-    RegistrarseComponent,
-    InicioUsuarioComponent,
-    GastoFormComponent,
-    GastoListComponent,
-    IngresoFormComponent,
-    IngresoListComponent,
-    ServicioFormComponent,
-    ServicioListComponent,
-    UsuarioComponent,
-    ResumenComponent,
-    SoporteTecnicoComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule
-  ],
-  providers: [
-    { provide: LOCALE_ID, useValue: 'es' },
-    provideHttpClient(withFetch())
-  ],
-  bootstrap: [AppComponent]
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HomeComponent,
+        LoginComponent,
+        RegistrarseComponent,
+        InicioUsuarioComponent,
+        GastoFormComponent,
+        GastoListComponent,
+        IngresoFormComponent,
+        IngresoListComponent,
+        ServicioFormComponent,
+        ServicioListComponent,
+        UsuarioComponent,
+        ResumenComponent,
+        SoporteTecnicoComponent
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+    GoogleMapsModule], providers: [
+        { provide: LOCALE_ID, useValue: 'es' },
+        provideHttpClient(withFetch()),
+        provideHttpClient(withInterceptorsFromDi())
+    ] })
 export class AppModule { }
