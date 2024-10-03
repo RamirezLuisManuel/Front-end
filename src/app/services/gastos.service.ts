@@ -3,12 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Gasto } from '../models/Gasto';
+import { envinronment } from '../environments/environments';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GastosService {
-  private API_URI = 'http://localhost:3000/api/gasto';
+  private API_URI = `${envinronment.API_URI1}/gasto`;
 
   constructor(private http: HttpClient) { }
 
