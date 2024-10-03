@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Gastos</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <nav class="navbar">
+                <div class="navbar-container">
+                    <div class="logo">
+                        <a routerLink="/">
+                            <span>CONTROL GASTOS</span>
+                        </a>
+                    </div>
+                    <ul class="nav-links">
+                        <li><a routerLink="/registrarse">Registrarte</a></li>
+                        <li><a routerLink="/login">Inicia sesión</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="welcome-bar">
+                Bienvenido
+            </div>
+        </header>
+        <div *ngIf="notificationMessage" class="notification">
+            {{ notificationMessage }} <i class="fas fa-check"></i>
+        </div>
+        <main class="main-content">
+            <h4 class="fade-in">"Tranquilidad financiera: la cima está al alcance."</h4>
+            <br>
+            <div class="image-container">
+                <div class="card">
+                    <img src="assets/imagen1.jpg" alt="Image 1" class="card-image">
+                    <p class="card-text">“Presupuesto claro, gastos bajo control.”</p>
+                </div>
+                <div class="card">
+                    <img src="assets/imagen2.jpg" alt="Image 2" class="card-image">
+                    <p class="card-text">“ControlGastos: tu asistente personal para el dinero.”</p>
+                </div>
+                <div class="card">
+                    <img src="assets/imagen3.jpg" alt="Image 3" class="card-image">
+                    <p class="card-text">“Cada gasto cuenta: regístralo y toma el control.”</p>
+                </div>
+                <div class="card">
+                    <img src="assets/imagen4.jpg" alt="Image 4" class="card-image">
+                    <p class="card-text">“Revisa y ajusta: el camino hacia unas finanzas saludables.”</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

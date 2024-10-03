@@ -1,0 +1,20 @@
+{
+    "ingresos":[
+        {
+            "id": 1,
+            "tipoIngreso": "Salario",
+            "origenIngreso": "Empresa",
+            "categoria": "Mensual",
+            "monto": 2000.00,
+            "fechaIngreso": "01/06/2024"
+          },
+          {
+            "id": 2,
+            "tipoIngreso": "Venta",
+            "origenIngreso": "Tazas personalizadas",
+            "categoria": "Productos",
+            "monto": 1500.00,
+            "fechaIngreso": "15/06/2024"
+          }
+    ]
+}

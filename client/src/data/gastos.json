@@ -1,0 +1,28 @@
+{
+  "gastos": [
+    {
+      "id": 1,
+      "descripcion": "Pago quincenal renta del local",
+      "categoria": "Alquiler",
+      "monto": "3000.00",
+      "fechaTransaccion": "06/05/2024",
+      "metodoPago": "Efectivo"
+    },
+    {
+      "id": 2,
+      "descripcion": "Pago mensual internet",
+      "categoria": "Servicios",
+      "monto": "500.00",
+      "fechaTransaccion": "29/05/2024",
+      "metodoPago": "Tarjeta Debito"
+    },
+    {
+      "id": 0,
+      "descripcion": "Comprar de materiales",
+      "categoria": "Materiales",
+      "monto": "2000.00",
+      "fechaTransaccion": "15/04/2024",
+      "metodoPago": "Tajeta Credito"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+    "servicios": [
+        {
+            "id": 0,
+            "descripcion": "Compra de 200 camisas personalizadas",
+            "cliente": "Jose Perez Lopez",
+            "estado": "Pedndiente",
+            "monto": "",
+            "fechaServicio": "26/06/2024"
+        }
+    ]
+}
