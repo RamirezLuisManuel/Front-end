@@ -1,15 +1,14 @@
-import { importProvidersFrom, Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Servicio } from '../models/Servicio';
-import { envinronment } from '../environments/environments';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiciosService {
-  private API_URI = `${envinronment.API_URI1}/servicio`;
+  private API_URI = 'http://localhost:3000/api/servicio';
 
   constructor(private http: HttpClient) { }
 

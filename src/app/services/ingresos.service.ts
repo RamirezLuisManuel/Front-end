@@ -3,13 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Ingreso } from '../models/Ingreso';
-import { envinronment } from '../environments/environments';
 
 @Injectable({
   providedIn: 'root'
 })
 export class IngresosService {
-  private API_URI = `${envinronment.API_URI1}/ingreso`;
+  private API_URI = 'http://localhost:3000/api/ingreso';
 
   constructor(private http: HttpClient) { }
 

@@ -14,7 +14,6 @@
                         </a>
                     </div>
                     <ul class="nav-links">
-                        <!--<li><a routerLink="/soporte-tecnico">Soporte Tecnico</a></li>-->
                         <li><a routerLink="/resumen">Resumen</a></li>
                         <li><a routerLink="/home">Cerrar sesión</a></li>
                         <li><a routerLink="/usuario">Usuario</a></li>
@@ -46,13 +45,7 @@
                     </div>
                     <div class="face back">
                         <h2>Gasto</h2>
-                        <p>
-                            Aquí puedes registrar y seguir todas 
-                            las salidas de dinero, 
-                            como compras y pagos. 
-                            Esto te ayuda a controlar y analizar 
-                            cómo usas tus recursos financieros.
-                        </p>
+                        <p>Aquí puedes registrar y seguir todas las salidas de dinero.</p>
                         <div class="enlace">
                             <a routerLink="/gastos/list">Ver mis gastos...</a>
                         </div>
@@ -65,12 +58,7 @@
                     </div>
                     <div class="face back">
                         <h2>Ingreso</h2>
-                        <p>
-                            Registra todas las entradas de dinero, 
-                            como las ventas de productos personalizados. 
-                            Esto te permite seguir el flujo de caja y 
-                            evaluar el rendimiento de tus ventas.
-                        </p>
+                        <p>Registra todas las entradas de dinero.</p>
                         <div class="enlace">
                             <a routerLink="/ingresos/list">Ver ingresos...</a>
                         </div>
@@ -83,19 +71,23 @@
                     </div>
                     <div class="face back">
                         <h2>Servicio</h2>
-                        <p>
-                            Administra todos los servicios que 
-                            has contratado, como el mantenimiento 
-                            del equipo y las suscripciones a 
-                            herramientas de diseño. Esto te 
-                            ayuda a mantener un seguimiento 
-                            detallado de proveedores y costos.
-                        </p>
+                        <p>Administra todos los servicios que has contratado.</p>
                         <div class="enlace">
                             <a routerLink="/servicios/list">Ver mis servicios...</a>
                         </div>
                     </div>
                 </div>
+            </section>
+
+            <section class="mapa">
+                <google-map height="450px"
+                            width="1000px"
+                            [center]="center"
+                            [zoom]="zoom"
+                            (mapClick)="moveMap($event)"
+                            (mapMousemove)="move($event)">
+                </google-map>
+                <button class="locate-button" (click)="recenterMap()">Mi ubicación</button>
             </section>
         </main>
     </div>

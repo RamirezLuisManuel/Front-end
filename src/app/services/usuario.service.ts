@@ -3,13 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Usuario } from '../models/Usuario';
-import { envinronment } from '../environments/environments';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
-  private API_URI = `${envinronment.API_URI1}/usuario`; // backend
+  private API_URI = 'http://localhost:3000/api/usuario'; // backend
 
   constructor(private http: HttpClient) { }
 
